@@ -1,0 +1,83 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle with gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e40af;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#0891b2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Glow effect -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Letter gradient -->
+    <linearGradient id="letterGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e5e7eb;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Code brackets gradient -->
+    <linearGradient id="codeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Outer glow circle -->
+  <circle cx="100" cy="100" r="95" fill="url(#bgGradient)" opacity="0.1" filter="url(#glow)"/>
+  
+  <!-- Main background circle -->
+  <circle cx="100" cy="100" r="85" fill="url(#bgGradient)" stroke="#ffffff" stroke-width="2" opacity="0.9"/>
+  
+  <!-- Code brackets background -->
+  <g transform="translate(100,100)">
+    <!-- Left bracket -->
+    <path d="M-45,-30 L-55,-30 L-55,-20 L-50,-15 L-50,15 L-55,20 L-55,30 L-45,30" 
+          fill="none" stroke="url(#codeGradient)" stroke-width="3" opacity="0.6"/>
+    
+    <!-- Right bracket -->
+    <path d="M45,-30 L55,-30 L55,-20 L50,-15 L50,15 L55,20 L55,30 L45,30" 
+          fill="none" stroke="url(#codeGradient)" stroke-width="3" opacity="0.6"/>
+    
+    <!-- Center dots (representing code) -->
+    <circle cx="-25" cy="-10" r="2" fill="url(#codeGradient)" opacity="0.7"/>
+    <circle cx="-15" cy="-10" r="2" fill="url(#codeGradient)" opacity="0.7"/>
+    <circle cx="-5" cy="-10" r="2" fill="url(#codeGradient)" opacity="0.7"/>
+    
+    <circle cx="5" cy="10" r="2" fill="url(#codeGradient)" opacity="0.7"/>
+    <circle cx="15" cy="10" r="2" fill="url(#codeGradient)" opacity="0.7"/>
+    <circle cx="25" cy="10" r="2" fill="url(#codeGradient)" opacity="0.7"/>
+  </g>
+  
+  <!-- Main letter 'S' -->
+  <text x="100" y="130" font-family="Arial, sans-serif" font-size="80" font-weight="bold" 
+        text-anchor="middle" fill="url(#letterGradient)" filter="url(#glow)">S</text>
+  
+  <!-- Subtle tech elements -->
+  <g transform="translate(100,100)" opacity="0.3">
+    <!-- Circuit-like lines -->
+    <line x1="-60" y1="-40" x2="-40" y2="-40" stroke="#06b6d4" stroke-width="1"/>
+    <line x1="-40" y1="-40" x2="-40" y2="-50" stroke="#06b6d4" stroke-width="1"/>
+    <circle cx="-40" cy="-50" r="1.5" fill="#06b6d4"/>
+    
+    <line x1="60" y1="40" x2="40" y2="40" stroke="#06b6d4" stroke-width="1"/>
+    <line x1="40" y1="40" x2="40" y2="50" stroke="#06b6d4" stroke-width="1"/>
+    <circle cx="40" cy="50" r="1.5" fill="#06b6d4"/>
+    
+    <!-- Small geometric shapes -->
+    <polygon points="-65,20 -60,15 -55,20 -60,25" fill="#7c3aed"/>
+    <polygon points="65,-20 60,-15 55,-20 60,-25" fill="#7c3aed"/>
+  </g>
+  
+  <!-- Highlight effect -->
+  <circle cx="100" cy="100" r="85" fill="none" stroke="url(#letterGradient)" stroke-width="1" opacity="0.3"/>
+  
+  <!-- Inner highlight -->
+  <circle cx="80" cy="80" r="8" fill="#ffffff" opacity="0.2"/>
+</svg>

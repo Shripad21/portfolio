@@ -120,8 +120,8 @@ const Home = () => {
     {
       degree: "B.Tech in Computer Engineering",
       institution: "AGPIT Solapur, Maharashtra",
-      duration: "August 2022 – May 2025",
-      grade: "Expected 2025",
+      duration: "August 2022 – june 2025",
+      grade: "completed",
       details: "Developed essential communication and technical knowledge skills"
     },
     {
@@ -134,10 +134,11 @@ const Home = () => {
   ];
 
   const languages = [
+    { name: "English", level: "fluent", percentage: 95 },
     { name: "Telugu", level: "Native", percentage: 100 },
     { name: "Marathi", level: "Fluent", percentage: 95 },
-    { name: "Hindi", level: "Fluent", percentage: 90 },
-    { name: "English", level: "Intermediate", percentage: 75 }
+    { name: "Hindi", level: "Fluent", percentage: 90 }
+    
   ];
 
   const achievements = [
@@ -167,7 +168,7 @@ const Home = () => {
         <div className="absolute top-1/2 left-1/2 w-60 h-60 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-2000"></div>
       </div>
 
-      {/* Navigation Header */}
+      {/* Navigation Header
       <nav className="relative z-10 p-6 flex justify-between items-center backdrop-blur-sm border-b border-white/10">
         <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
           Shripad Raccha
@@ -179,7 +180,7 @@ const Home = () => {
           <a href="#education" className="hover:text-blue-400 transition-colors">Education</a>
           <a href="#contact" className="hover:text-blue-400 transition-colors">Contact</a>
         </div>
-      </nav>
+      </nav> */}
 
       {/* Hero Section */}
       <section className={`relative z-10 px-6 py-20 transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
@@ -223,10 +224,14 @@ const Home = () => {
                   <Phone className="w-5 h-5" />
                   <span>+91 9561687911</span>
                 </a>
-                <button className="flex items-center space-x-2 bg-purple-600/20 px-6 py-3 rounded-lg hover:bg-purple-600/30 transition-all duration-300 backdrop-blur-sm border border-purple-500/30">
-                  <Download className="w-5 h-5" />
-                  <span>Download Resume</span>
-                </button>
+                <a
+  href="/resume.pdf" // Place your PDF in the public folder
+  download
+  className="flex items-center space-x-2 bg-purple-600/20 px-6 py-3 rounded-lg hover:bg-purple-600/30 transition-all duration-300 backdrop-blur-sm border border-purple-500/30"
+>
+  <Download className="w-5 h-5" />
+  <span>Download Resume</span>
+</a>
               </div>
 
               <div className="flex space-x-6">
